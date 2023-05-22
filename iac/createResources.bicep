@@ -1193,7 +1193,7 @@ resource loadtestsvc 'Microsoft.LoadTestService/loadTests@2022-12-01' = {
   location: resourceLocation
   tags: resourceTags
   identity: {
-    type: 'UserAssigned'
+    type: 'SystemAssigned,UserAssigned'
     userAssignedIdentities: {
       '${userassignedmiforkvaccess.id}': {}
     }
